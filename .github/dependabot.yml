@@ -7,7 +7,7 @@ version: 2
 updates:
   - package-ecosystem: "github-actions"
     directories:
-      - "./.github/actions/*"
+      - "./.github/*"
     schedule:
       interval: "weekly"
     commit-message:
@@ -15,7 +15,7 @@ updates:
     cooldown:
       default-days: 3
     groups:
-      minor:
+      all:
         update-types:
           - "major"
           - "minor"
