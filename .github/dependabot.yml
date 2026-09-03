@@ -17,6 +17,7 @@ updates:
     groups:
       minor:
         update-types:
+          - "major"
           - "minor"
           - "patch"
         patterns:
