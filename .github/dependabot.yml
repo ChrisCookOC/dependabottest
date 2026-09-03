@@ -6,7 +6,8 @@
 version: 2
 updates:
   - package-ecosystem: "github-actions"
-    directory: "./.github/actions/silly-check/"
+    directories:
+      - "./.github/actions/silly-check/"
     schedule:
       interval: "weekly"
     commit-message:
