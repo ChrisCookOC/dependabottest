@@ -1,0 +1,22 @@
+name: Silly Check
+description: A tiny reusable action that runs a couple of silly checks
+
+inputs:
+  file-to-check:
+    description: File path that must exist
+    required: false
+    default: README.md
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Say hello
+      shell: bash
+      run: echo "Running a silly check from a reusable action..."
+
+    - name: Check file exists
+      shell: bash
+      run: test -f "${{ inputs.file-to-check }}"
