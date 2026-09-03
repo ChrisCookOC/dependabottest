@@ -1,0 +1,19 @@
+name: Simple Workflow
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  silly-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Say hello
+        run: echo "Running a silly check..."
+
+      - name: Silly check
+        run: test -f README.md
