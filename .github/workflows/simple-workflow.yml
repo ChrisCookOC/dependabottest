@@ -10,10 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Say hello
-        run: echo "Running a silly check..."
-
-      - name: Silly check
-        run: test -f README.md
+      - name: Run reusable silly check action
+        uses: ./.github/actions/silly-check
+        with:
+          file-to-check: README.md
