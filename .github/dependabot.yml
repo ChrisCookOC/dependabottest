@@ -8,7 +8,7 @@ updates:
   - package-ecosystem: "github-actions"
     directories:
       - "/"
-      - "/.github/actions/*"
+      - "/.github/*"
     schedule:
       interval: "weekly"
     commit-message:
